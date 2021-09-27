@@ -16,5 +16,10 @@ namespace Venta_de_dispositivos_tecnologicos
         {
             InitializeComponent();
         }
+
+        private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
