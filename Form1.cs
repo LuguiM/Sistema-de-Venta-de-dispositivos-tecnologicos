@@ -15,6 +15,7 @@ namespace Venta_de_dispositivos_tecnologicos
 {
     public partial class login : Form
     {
+       
         public login()
         {
             InitializeComponent();
@@ -22,36 +23,31 @@ namespace Venta_de_dispositivos_tecnologicos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OleDbConnection conexion_access = new OleDbConnection();
-            conexion_access.ConnectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\sistema\sistema.mdb;Persist Security Info=False;";
+            OleDbConnection conexion_access = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|login.accdb");
+            
 
             conexion_access.Open();
 
-            OleDbDataAdapter consulta = new OleDbDataAdapter("SELECT * FROM tusuario", conexion_access);
+            string consulta = "select password,usuario from login where password = '" + textBox2.Text + "' and usuario = '" + textBox1.Text + "';";
 
-            DataSet resultado = new DataSet();
-            consulta.Fill(resultado);
+            OleDbCommand comando = new OleDbCommand(consulta, conexion_access);
+            OleDbDataReader leedb;
+            leedb = comando.ExecuteReader();
+            Boolean existereg = leedb.HasRows;
 
-            foreach (DataRow registro in resultado.Tables[0].Rows)
+            if (existereg)
             {
-                if ((textBox1.Text == registro["nombre"].ToString()) && (textBox2.Text == registro["clave"].ToString()))
-                {
-                    fmenu fm = new fmenu();
-                    fm.Show();
-                    this.Hide();
-                }
-            }
-            try
-            {
+                MessageBox.Show("bienvenido al sistema" + textBox1.Text);
+                fmenu f2 = new fmenu();
+                f2.Show();
+                this.Hide();
 
             }
-        
-
-        catch (Exception err)
+            else
             {
-                MessageBox.Show(err.Message);
-                MessageBox.Show("Error de usuario o clave de acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox1.Focus();
+                MessageBox.Show("usuario o contraseña incorrecto trate de nuevo");
+                return;
+
             }
             conexion_access.Close();
         }
