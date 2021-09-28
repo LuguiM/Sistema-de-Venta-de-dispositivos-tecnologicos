@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
 using System.Data.OleDb;
+using System.IO;
 
 namespace Venta_de_dispositivos_tecnologicos
 {
@@ -23,7 +23,7 @@ namespace Venta_de_dispositivos_tecnologicos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OleDbConnection conexion_access = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|login.accdb");
+            OleDbConnection conexion_access = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|logins.accdb");
             
 
             conexion_access.Open();
@@ -88,32 +88,7 @@ namespace Venta_de_dispositivos_tecnologicos
 
     
 
-    private void button3_Click(object sender, EventArgs e)
-        {
-            MySqlConnection conectar = new MySqlConnection("server=localhost;database=sistema_usuarios;id=root;password=grupocuatro;");
-            conectar.Open();
+    
 
-            MySqlCommand codigo = new MySqlCommand();
-            MySqlConnection conectanos = new MySqlConnection();
-            codigo.Connection = conectar;
-
-            codigo.CommandText = ("Select *from usuarios where usuarios= '" + textBox1.Text + "' and password = '" + textBox2 + "'  ");
-
-            MySqlDataReader leer = codigo.ExecuteReader();
-
-            if (leer.Read())
-            {
-                MessageBox.Show("Bienvenidos");
-                fmenu fm = new fmenu();
-                fm.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuario o Contraseña incorrectos");
-            }
-            conectar.Close();
-
-        }
     }
 }
