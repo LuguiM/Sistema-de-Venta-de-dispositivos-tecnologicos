@@ -23,13 +23,13 @@ namespace Venta_de_dispositivos_tecnologicos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OleDbConnection conexion_access = new OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\\Users\\Pedro Mejia\\Documents\\Database11.mdb");
+            OleDbConnection conexion_access = new OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0; Data Source =| DataDirectory |\\Database11.mdb");
 
-
+            
 
             conexion_access.Open();
 
-            string consulta = "select password,usuario from login where password = '" + textBox2.Text + "' and usuario = '" + textBox1.Text + "';";
+            string consulta = "select Contrasena,Usuario from login where Contrasena = '" + textBox2.Text + "' and usuario = '" + textBox1.Text + "';";
 
             OleDbCommand comando = new OleDbCommand(consulta, conexion_access);
             OleDbDataReader leedb;
