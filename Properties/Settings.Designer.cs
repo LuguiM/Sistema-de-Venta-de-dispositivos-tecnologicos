@@ -32,5 +32,15 @@ namespace Venta_de_dispositivos_tecnologicos.Properties {
                 return ((string)(this["loginsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\Database11.mdb")]
+        public string Database11ConnectionString {
+            get {
+                return ((string)(this["Database11ConnectionString"]));
+            }
+        }
     }
 }

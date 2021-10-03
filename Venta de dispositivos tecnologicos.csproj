@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database11DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="fmenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,11 +64,6 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="loginsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>loginsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="pcs.cs">
       <SubType>Form</SubType>
@@ -87,16 +89,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="loginsDataSet.xsc">
-      <DependentUpon>loginsDataSet.xsd</DependentUpon>
+    <None Include="Database11DataSet.xsc">
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
     </None>
-    <None Include="loginsDataSet.xsd">
+    <None Include="Database11DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginsDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>Database11DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="loginsDataSet.xss">
-      <DependentUpon>loginsDataSet.xsd</DependentUpon>
+    <None Include="Database11DataSet.xss">
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,7 +120,7 @@
     <None Include="Resources\fondoventa.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="logins.accdb">
+    <Content Include="Database11.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

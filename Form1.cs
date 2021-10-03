@@ -23,8 +23,9 @@ namespace Venta_de_dispositivos_tecnologicos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OleDbConnection conexion_access = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|logins.accdb");
-            
+            OleDbConnection conexion_access = new OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\\Users\\Pedro Mejia\\Documents\\Database11.mdb");
+
+
 
             conexion_access.Open();
 
@@ -86,9 +87,9 @@ namespace Venta_de_dispositivos_tecnologicos
             }
         }
 
-    
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
-    
-
+        }
     }
 }
