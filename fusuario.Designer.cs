@@ -194,7 +194,7 @@ namespace Venta_de_dispositivos_tecnologicos
             // bmodificar
             // 
             this.bmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bmodificar.Location = new System.Drawing.Point(289, 264);
+            this.bmodificar.Location = new System.Drawing.Point(289, 265);
             this.bmodificar.Name = "bmodificar";
             this.bmodificar.Size = new System.Drawing.Size(99, 43);
             this.bmodificar.TabIndex = 14;
@@ -205,7 +205,7 @@ namespace Venta_de_dispositivos_tecnologicos
             // bnuevo
             // 
             this.bnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnuevo.Location = new System.Drawing.Point(42, 262);
+            this.bnuevo.Location = new System.Drawing.Point(42, 264);
             this.bnuevo.Name = "bnuevo";
             this.bnuevo.Size = new System.Drawing.Size(105, 44);
             this.bnuevo.TabIndex = 15;

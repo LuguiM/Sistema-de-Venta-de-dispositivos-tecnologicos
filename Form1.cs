@@ -23,13 +23,13 @@ namespace Venta_de_dispositivos_tecnologicos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OleDbConnection conexion_access = new OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0; Data Source =| DataDirectory |\\Database11.mdb");
+            OleDbConnection conexion_access = new OleDbConnection(@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source=|DataDirectory|\\Database11.mdb");
 
             
 
             conexion_access.Open();
 
-            string consulta = "select Contrasena,Usuario from login where Contrasena = '" + textBox2.Text + "' and usuario = '" + textBox1.Text + "';";
+            string consulta = "select Contrasena,Usuario from login where Contrasena = '" + textBox2.Text + "' and Usuario = '" + textBox1.Text + "';";
 
             OleDbCommand comando = new OleDbCommand(consulta, conexion_access);
             OleDbDataReader leedb;
@@ -89,6 +89,13 @@ namespace Venta_de_dispositivos_tecnologicos
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'database11DataSet.login' Puede moverla o quitarla según sea necesario.
+            this.loginTableAdapter.Fill(this.database11DataSet.login);
 
         }
     }
