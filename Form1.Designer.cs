@@ -29,6 +29,7 @@ namespace Venta_de_dispositivos_tecnologicos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,7 +37,14 @@ namespace Venta_de_dispositivos_tecnologicos
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.database11DataSet = new Venta_de_dispositivos_tecnologicos.Database11DataSet();
+            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loginTableAdapter = new Venta_de_dispositivos_tecnologicos.Database11DataSetTableAdapters.loginTableAdapter();
+            this.loginBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -87,13 +95,16 @@ namespace Venta_de_dispositivos_tecnologicos
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginBindingSource, "Usuario", true));
             this.textBox1.Location = new System.Drawing.Point(142, 59);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginBindingSource1, "Cotrasena", true));
             this.textBox2.Location = new System.Drawing.Point(142, 130);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -109,6 +120,25 @@ namespace Venta_de_dispositivos_tecnologicos
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // database11DataSet
+            // 
+            this.database11DataSet.DataSetName = "Database11DataSet";
+            this.database11DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loginBindingSource
+            // 
+            this.loginBindingSource.DataMember = "login";
+            this.loginBindingSource.DataSource = this.database11DataSet;
+            // 
+            // loginTableAdapter
+            // 
+            this.loginTableAdapter.ClearBeforeFill = true;
+            // 
+            // loginBindingSource1
+            // 
+            this.loginBindingSource1.DataMember = "login";
+            this.loginBindingSource1.DataSource = this.database11DataSet;
             // 
             // login
             // 
@@ -126,7 +156,11 @@ namespace Venta_de_dispositivos_tecnologicos
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database11DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +175,10 @@ namespace Venta_de_dispositivos_tecnologicos
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Database11DataSet database11DataSet;
+        private System.Windows.Forms.BindingSource loginBindingSource;
+        private Database11DataSetTableAdapters.loginTableAdapter loginTableAdapter;
+        private System.Windows.Forms.BindingSource loginBindingSource1;
     }
 }
 

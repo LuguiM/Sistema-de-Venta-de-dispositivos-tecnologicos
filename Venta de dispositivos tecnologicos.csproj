@@ -34,7 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
+<<<<<<< HEAD
       <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+=======
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+>>>>>>> 23aed00dde9bceb9fa391ad3e3f32f8bb6b47c7a
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database11DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="fmenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,10 +69,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>loginsDataSet.xsd</DependentUpon>
+    <Compile Include="fusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fusuario.Designer.cs">
+      <DependentUpon>fusuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Ejemplo Accesso a BD MySQL.cs">
       <SubType>Form</SubType>
@@ -79,14 +89,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="Ejemplo Accesso a BD MySQL.resx">
       <DependentUpon>Ejemplo Accesso a BD MySQL.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <Compile Include="sistemaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDataSet.xsd</DependentUpon>
+    </Compile>
+>>>>>>> 23aed00dde9bceb9fa391ad3e3f32f8bb6b47c7a
     <EmbeddedResource Include="fmenu.resx">
       <DependentUpon>fmenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fusuario.resx">
+      <DependentUpon>fusuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,16 +119,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="loginsDataSet.xsc">
-      <DependentUpon>loginsDataSet.xsd</DependentUpon>
+    <None Include="Database11DataSet.xsc">
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
     </None>
-    <None Include="loginsDataSet.xsd">
+    <None Include="Database11DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginsDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>Database11DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="loginsDataSet.xss">
-      <DependentUpon>loginsDataSet.xsd</DependentUpon>
+    <None Include="Database11DataSet.xss">
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,6 +139,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sistemaDataSet.xsc">
+      <DependentUpon>sistemaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDataSet.xss">
+      <DependentUpon>sistemaDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -129,9 +161,14 @@
     <None Include="Resources\fondoventa.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="logins.accdb">
+    <Content Include="Database11.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="sistema.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\usuario.jpg" />
+    <None Include="Resources\usuario-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
