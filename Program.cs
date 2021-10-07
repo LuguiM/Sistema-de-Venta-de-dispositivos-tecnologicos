@@ -16,7 +16,7 @@ namespace Venta_de_dispositivos_tecnologicos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new fusuario());
         }
     }
 }
