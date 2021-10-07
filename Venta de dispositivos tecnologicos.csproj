@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>loginsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Ejemplo Accesso a BD MySQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejemplo Accesso a BD MySQL.Designer.cs">
+      <DependentUpon>Ejemplo Accesso a BD MySQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="pcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ejemplo Accesso a BD MySQL.resx">
+      <DependentUpon>Ejemplo Accesso a BD MySQL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmenu.resx">
       <DependentUpon>fmenu.cs</DependentUpon>
     </EmbeddedResource>
