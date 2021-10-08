@@ -75,12 +75,6 @@
     <Compile Include="fusuario.Designer.cs">
       <DependentUpon>fusuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ejemplo Accesso a BD MySQL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ejemplo Accesso a BD MySQL.Designer.cs">
-      <DependentUpon>Ejemplo Accesso a BD MySQL.cs</DependentUpon>
-    </Compile>
     <Compile Include="pcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +83,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <EmbeddedResource Include="Ejemplo Accesso a BD MySQL.resx">
       <DependentUpon>Ejemplo Accesso a BD MySQL.cs</DependentUpon>
@@ -100,6 +95,8 @@
       <DependentUpon>sistemaDataSet.xsd</DependentUpon>
     </Compile>
 >>>>>>> 23aed00dde9bceb9fa391ad3e3f32f8bb6b47c7a
+=======
+>>>>>>> parent of 4f14973 (Form mySQL)
     <EmbeddedResource Include="fmenu.resx">
       <DependentUpon>fmenu.cs</DependentUpon>
     </EmbeddedResource>
